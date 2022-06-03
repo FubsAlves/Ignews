@@ -5,10 +5,12 @@ import '../styles/global.scss';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <NextAuthProvider session={pageProps.session}>
-      <Header />
-      <Component {...pageProps} />
-    </NextAuthProvider>
+  
+      <NextAuthProvider session={pageProps.session}>
+        <Header />
+        <Component {...pageProps} />
+      </NextAuthProvider>
+
   ) 
 }
 

@@ -1,0 +1,18 @@
+{
+  "_cts": {
+    "PublicationId": {
+      "Title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 100
+        }
+      },
+      "Content": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 100
+        }
+      }
+    }
+  }
+}

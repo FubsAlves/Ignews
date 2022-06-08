@@ -1,17 +1,15 @@
-import { AppProps } from 'next/app';
-import { Header } from '../components/Header';
-import { SessionProvider as NextAuthProvider } from 'next-auth/react';
+import {AppProps} from 'next/app';
 import '../styles/global.scss';
+import Header from '../components/Header';
+import { SessionProvider } from "next-auth/react"
+import NextNProgress from "nextjs-progressbar";
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function App({Component, pageProps: { session, ...pageProps }}) {
   return (
-  
-      <NextAuthProvider session={pageProps.session}>
-        <Header />
-        <Component {...pageProps} />
-      </NextAuthProvider>
-
-  ) 
+    <SessionProvider session={session}>
+      <NextNProgress color='#eba417'/>
+      <Header/>
+      <Component {...pageProps} />
+    </SessionProvider>
+  )
 }
-
-export default MyApp
